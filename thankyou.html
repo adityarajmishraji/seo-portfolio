@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You</title>
+    <link rel="stylesheet" href="style.css">
+    
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-WWDGVNRS');</script>
+<!-- End Google Tag Manager -->
+
+</head>
+<body>
+
+    <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WWDGVNRS"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+    <header>
+        <h1>Thank You for Your Submission</h1>
+        <p>We will reach you soon.</p>
+    </header>
+    <!-- <section>
+        <?php
+        // Start the session to access stored data (Task 5)
+        session_start();
+        
+        // Display username if logged in (Task 5)
+        if (isset($_SESSION['username'])) {
+            echo '<p>Welcome, ' . htmlspecialchars($_SESSION['username']) . '!</p>';
+        }
+        
+        // Check for errors or successful submission
+        if (isset($_SESSION['errors']) && !empty($_SESSION['errors'])) {
+            echo '<h2>Submission Errors</h2>';
+            echo '<ul>';
+            foreach ($_SESSION['errors'] as $error) {
+                echo '<li style="color: red;">' . htmlspecialchars($error) . '</li>';
+            }
+            echo '</ul>';
+            echo '<p><a href="index.html">Go back to the form</a></p>';
+        } elseif (isset($_SESSION['form_data'])) {
+            // Display submitted form data
+            $form_data = $_SESSION['form_data'];
+            echo '<h2>Submission Details</h2>';
+            echo '<p><strong>Name:</strong> ' . htmlspecialchars($form_data['name']) . '</p>';
+            echo '<p><strong>Email:</strong> ' . htmlspecialchars($form_data['email']) . '</p>';
+            echo '<p><strong>Message:</strong> ' . htmlspecialchars($form_data['message']) . '</p>';
+            
+            // Display additional messages from input handling (Task 1)
+            if (!empty($form_data['messages'])) {
+                echo '<h2>Input Processing Messages</h2>';
+                echo '<ul>';
+                foreach ($form_data['messages'] as $msg) {
+                    echo '<li>' . htmlspecialchars($msg) . '</li>';
+                }
+                echo '</ul>';
+            }
+            
+            // Display skills from PHP array (Task 3)
+            echo '<h2>My Skills</h2>';
+            echo '<ul>';
+            foreach ($form_data['skills'] as $skill) {
+                echo '<li>' . htmlspecialchars($skill) . '</li>';
+            }
+            echo '</ul>';
+
+            // Task 2: Demonstrate PHP loops
+            echo '<h2>PHP Loops Demonstration</h2>';
+            
+            // for loop: Print numbers 1 to 5
+            echo '<h3>Numbers (for loop)</h3>';
+            echo '<ul>';
+            for ($i = 1; $i <= 5; $i++) {
+                echo '<li>Number: ' . $i . '</li>';
+            }
+            echo '</ul>';
+
+            // while loop: Print numbers 6 to 10
+            echo '<h3>Numbers (while loop)</h3>';
+            echo '<ul>';
+            $j = 6;
+            while ($j <= 10) {
+                echo '<li>Number: ' . $j . '</li>';
+                $j++;
+            }
+            echo '</ul>';
+
+            // foreach loop: Print sample array values
+            $sample_array = ['Apple', 'Banana', 'Orange', 'Mango'];
+            echo '<h3>Fruits (foreach loop)</h3>';
+            echo '<ul>';
+            foreach ($sample_array as $fruit) {
+                echo '<li>Fruit: ' . htmlspecialchars($fruit) . '</li>';
+            }
+            echo '</ul>';
+        } else {
+            echo '<p>No submission data found. Please submit the form.</p>';
+            echo '<p><a href="index.html">Go back to the form</a></p>';
+        }
+        ?>
+    </section> -->
+    <!-- <footer style="background-color: #f2f2f2; padding: 20px; text-align: center;">
+        <?php
+        // Display username in footer if logged in (Task 5)
+        if (isset($_SESSION['username'])) {
+            echo '<p>Logged in as: ' . htmlspecialchars($_SESSION['username']) . '</p>';
+            // Logout button (Task 6)
+            echo '<a href="logout.php" class="logout-button">Logout</a>';
+        }
+        ?>
+        <p>© 2025 Aditya. All rights reserved.</p>
+    </footer> -->
+</body>
+</html>

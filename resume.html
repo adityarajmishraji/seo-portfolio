@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Personal webpage of Aditya, a PHP Developer. Learn about my skills, education, and how to contact me.">
+    <meta name="keywords" content="Aditya, PHP Developer, Portfolio, Skills, Education, Contact">
+    <meta name="author" content="Aditya Mishra">
+
+    <title>Portfolio</title>
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="./style.css" as="style">
+    <link rel="preload" href="./adi.avif" as="image">
+    
+    <!-- Critical CSS inline -->
+    <style>
+        body{font-family:Arial,sans-serif;background-color:#f3d4d4;line-height:1.6;margin:auto;padding:2px}
+        header{background:rgba(255,255,255,.95);padding:3rem 0;text-align:center;box-shadow:0 8px 32px rgba(0,0,0,.1);border-radius:0 0 30px 30px;margin-bottom:2rem}
+        header h1{font-size:3.5rem;font-weight:700;background:linear-gradient(45deg,#d37272,#08929e);background-clip:text;margin-bottom:.5rem;color:transparent}
+    </style>
+    
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" media="print" onload="this.media='all'">
+
+</head>
+<body>
+    <!-- <aside><p>Lorem ipsum enim doloremque alias vel iure provident suscipit, facilis quam atque!</p>
+    </aside> -->
+    <header id="header">
+        <h1>Aditya Mishra</h1>
+        <h2 >PHP Developer</h2>
+        <p id="heading">Hey !</p>
+
+        <button type="button" id="profile" onclick="myFunction()">Click Me!</button>
+        <button type="button" id="themeToggle" onclick="toggleTheme()"><i class="fa-regular fa-moon"></i></button>
+
+        <img src="./adi.avif" alt="Aditya's Avatar" style="width: 180px; height: 180px; border-radius: 50%; object-fit: cover; border: 4px solid #542d875a; box-shadow: 0 3px 15px rgba(0,0,0,0.2);" loading="lazy">
+        <!-- in loading="eager" for better practice -->
+    </header>
+    <nav id="navbar" class="nav" onclick="changeNavStyle()" >
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>  
+        </ul>
+    </nav>
+
+    <section id="about" >
+        <h2>About Me</h2>
+        <p >I am a PHP developer with a passion for creating dynamic and interactive web applications. I have experience in various PHP frameworks and a strong understanding of web technologies.And currntly I am learning the DevOps Culture.</p>
+        
+        <span>
+        <a class="g-drive" href="https://drive.google.com/file/d/1YQiOkaOEPqwYRuYsAHFKWACGMSPYj0dE/view?usp=sharing" target="_blank" aria-label="Checkout my CV on Google Drive"><i class="fab fa-google-drive"></i></a>
+        <a class="github" href="https://github.com/adityarajmishraji" target="_blank" aria-label="Visit my GitHub profile"><i class="fab fa-github"></i></a></span>    
+    </section>
+    <button type="button" id="aboutBtnHide" onclick="changeStyle()">ToHide</button>
+        <button type="button" id="aboutBtnShow" onclick="changeStyle()">ToShow</button>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <button type="button" onclick="loadSkills()">Load Skills</button>
+        <ul id="skills-list">
+            <li class="skill-item">HTML/CSS</li>
+            <li class="skill-item">JavaScript</li>
+            <li class="skill-item">jQuery</li>
+            <li class="skill-item">PHP</li>
+            <li class="skill-item">MySQL</li>
+            <li class="skill-item">MongoDB</li>
+            <li class="skill-item">ReactJS</li>
+            
+        </ul>
+    </section>
+    <section id = "education">
+        <h2>Education</h2>
+        
+        <table border="1" cellpadding="10" cellspacing="1" bgcolor="#f2f2f2">
+            <thead>
+            <tr style="background-color: #e9e3d9;">
+                <th id="degree">Degree</th>
+                <th id="institute">Institution</th>
+                <th id="year">Year</th>
+            </tr>
+            <tr>
+                <td>Master in Computer applications</td>
+                <td>Sardar Patel University</td>
+                <td>2025</td>
+            </tr>
+            <tr>
+                <td>Bachelor of Computer Application</td>
+                <td>VNSGU University</td>
+                <td>2023</td>
+            </tr>
+            <tr>
+                <td>12th Science</td>
+                <td>Sanskar Bharti High School</td>
+                <td>2020</td>
+            </tr>
+        </table>
+        <button type="button" id="refreshButton">refresh</button>
+    </section>
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>If you would like to get in touch, please contact me below:</p>
+        <form name="myForm" action="thankyou.html" onSubmit="return formValidation() && thankYou()" method="get" style="background: #f5e7e2;">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" autocomplete="name" placeholder="Enter Your Full name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" autocomplete="email" placeholder="Enter Your Email">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" placeholder="Enter Your message" rows="4"></textarea><br>
+            <input type="submit" id="submit" value="Submit">
+        </form>
+    </section>
+        
+        <footer style="background-color: #f2f2f2; padding: 20px; text-align: center;"   >
+            <h2>Get in Touch With Social Media Plateform</h2>
+            <a href="https://www.linkedin.com/in/aditya-mishra-335288246/" class="social-links" target="_blank">LinkedIn</a>
+            <a href="https://adityamishraworld.blogspot.com/" class="social-links" target="_blank">Blog</a>
+            <a href="https://www.instagram.com/adi_mishra_111/" class="social-links" target="_blank">Instagram</a><br>
+            <p>&copy; 2025 Aditya. All rights reserved.</p>
+        </footer>
+        
+    <!-- Non-critical scripts at bottom -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js" defer></script>
+    <script src="./script.js" defer></script>
+    </body>
+</html>
