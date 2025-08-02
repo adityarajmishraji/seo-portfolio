@@ -1,0 +1,14 @@
+name: Deploy SEO Portfolio
+run-name: ${{ github.actor }} is deploying SEO Portfolio 🚀
+on: [push]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository code
+        uses: actions/checkout@v4
+      - name: List files in the repository
+        run: |
+          ls ${{ github.workspace }}
+      - name: Print deployment message
+        run: echo "Deploying the SEO Portfolio repository!"
