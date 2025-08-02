@@ -27,7 +27,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: seo-portfolio/seo-portfolio  # path fixed
+          path: .  # root folder
 
       - name: Deploy to GitHub Pages
         id: deployment
